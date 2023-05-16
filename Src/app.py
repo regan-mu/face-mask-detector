@@ -15,17 +15,19 @@ st.set_page_config(
 
 
 def load_face_detector_model():
-    detector_path = "../Models/face_detector"
-    prototxt_path = os.path.sep.join(
-        [detector_path, "deploy.prototxt"])
-    weight_path = os.path.sep.join(
-        [detector_path, 'res10_300x300_ssd_iter_140000.caffemodel'])
-
+    prototxt_path = os.path.join(
+        os.getcwd(), "face_detector", "deploy.prototxt"
+    )
+    weight_path = os.path.join(
+        os.getcwd(), "face_detector", 'res10_300x300_ssd_iter_140000.caffemodel'
+    )
     net = cv2.dnn.readNet(prototxt_path, weight_path)
 
     return net
 
-
+print(os.path.join(
+        os.getcwd(), "facedetector", 'res10_300x300_ssd_iter_140000.caffemodel'
+    ))
 def prediction(image):
     mask_prediction = None
     image = cv2.imdecode(np.frombuffer(image.read(), dtype='uint8'), cv2.IMREAD_COLOR)
@@ -80,7 +82,7 @@ if capture_method == "Face Upload":
 elif capture_method == "Camera Capture":
     face_image = st.sidebar.camera_input("Capture Face")
 
-st.sidebar.subheader("Source code [Github](https://github.com/regan-mu)")
+st.sidebar.subheader("Source code [Github](https://github.com/regan-mu/face-mask-detector)")
 st.sidebar.write("Predict whether the face detected is wearing a mask or not.")
 
 # Main Page
