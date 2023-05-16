@@ -28,7 +28,7 @@ def load_face_detector_model():
 
 def prediction(image):
     mask_prediction = None
-    image = cv2.imdecode(np.fromstring(image.read(), dtype='uint8'), cv2.IMREAD_COLOR)
+    image = cv2.imdecode(np.frombuffer(image.read(), dtype='uint8'), cv2.IMREAD_COLOR)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     network = load_face_detector_model()
     model = load_model("../Models/model.h5")
