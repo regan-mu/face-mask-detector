@@ -30,9 +30,18 @@ The app is hosted on Streamlit at the [URL](https://www.tensorflow.org)
 5. Post process the prediction to generate the prediction label.
 6. Create a bounding box for the image, then displays the image on the app with the label of the prediction.
 
-# Notebook
+# App Interface
+[!View 1](./Assets/screenshot_1.png)
+[!View 1](./Assets/screenshot_2.png)
+[!View 1](./Assets/screenshot_2.png)
 
-# Model
+# Notebooks
+
+[Research Notebook](https://github.com/regan-mu/face-mask-detector/tree/main/Notebooks)
+
+# Models
+
+[Facemask Model](https://github.com/regan-mu/face-mask-detector/tree/main/Models)
 
 # Applications
 
