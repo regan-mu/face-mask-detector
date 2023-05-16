@@ -31,9 +31,9 @@ The app is hosted on Streamlit at the [URL](https://www.tensorflow.org)
 6. Create a bounding box for the image, then displays the image on the app with the label of the prediction.
 
 # App Interface
-[!View 1](./Assets/screenshot_1.png)
-[!View 1](./Assets/screenshot_2.png)
-[!View 1](./Assets/screenshot_2.png)
+![View 1](./Assets/screenshot_1.png)
+![View 1](./Assets/screenshot_2.png)
+![View 1](./Assets/screenshot_2.png)
 
 # Notebooks
 
