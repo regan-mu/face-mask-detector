@@ -33,7 +33,7 @@ The app is hosted on Streamlit at the [URL](https://www.tensorflow.org)
 # App Interface
 ![View 1](./Assets/screenshot_1.png)
 ![View 1](./Assets/screenshot_2.png)
-![View 1](./Assets/screenshot_2.png)
+![View 1](./Assets/screenshot_3.png)
 
 # Notebooks
 
