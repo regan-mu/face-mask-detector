@@ -15,9 +15,9 @@ st.set_page_config(
 
 
 def load_face_detector_model():
-    config_path = "deploy.prototxt.txt"
+    config_path = "deploy.prototxt"
     model_path = "res10_300x300_ssd_iter_140000.caffemodel"
-    net = cv2.dnn.readNet(config_path, model_path)
+    net = cv2.dnn.readNetFromCaffe(config_path, model_path)
     return net
 
 
