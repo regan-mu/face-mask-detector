@@ -14,6 +14,13 @@ st.set_page_config(
 )
 
 
+def load_prediction_model():
+    app_path = os.path.dirname(__file__)
+    path = os.path.join(app_path, "model.h5")
+    model = load_model(path)
+    return model
+
+
 def load_face_detector_model():
     app_path = os.path.dirname(__file__)
     config_path = os.path.join(app_path, "deploy.prototxt")
@@ -27,7 +34,7 @@ def prediction(image):
     image = cv2.imdecode(np.frombuffer(image.read(), dtype='uint8'), cv2.IMREAD_COLOR)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     network = load_face_detector_model()
-    model = load_model("../Models/model.h5")
+    model = load_prediction_model()
     h, w = image.shape[:2]
     blob = cv2.dnn.blobFromImage(image, 1.0, (300, 300), (104.0, 177.0, 123.0))
     network.setInput(blob)
